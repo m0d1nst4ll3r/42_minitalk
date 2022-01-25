@@ -6,7 +6,7 @@
 /*   By: rpohlen <rpohlen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 03:39:28 by rpohlen           #+#    #+#             */
-/*   Updated: 2022/01/25 01:37:02 by rpohlen          ###   ########.fr       */
+/*   Updated: 2022/01/25 03:36:54 by rpohlen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@
 # include <sys/types.h> //getpid and kill
 # include <unistd.h> //getpid and sleep
 # include <signal.h> //to use signals
-# include <stdlib.h> //malloc free
 # include "ft_printf.h"
 
 int	ft_atoi(const char *str);

@@ -1,6 +1,7 @@
 #42_minitalk
 
 (started 24/01/2022)
+(ended 25/01/2022)
 
 Resources:
 

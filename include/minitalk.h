@@ -6,7 +6,7 @@
 /*   By: rpohlen <rpohlen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 03:39:28 by rpohlen           #+#    #+#             */
-/*   Updated: 2022/01/25 03:36:54 by rpohlen          ###   ########.fr       */
+/*   Updated: 2022/01/26 05:09:58 by rpohlen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,9 @@
 //time to wait for server confirmation before client resends msg
 # define MSG_TIMEOUT_C	2000
 
-# include <sys/types.h> //getpid and kill
-# include <unistd.h> //getpid and sleep
-# include <signal.h> //to use signals
 # include "ft_printf.h"
-
-int	ft_atoi(const char *str);
-int	ft_isint(const char *s);
+# include <sys/types.h> //getpid and kill
+# include <signal.h> //to use signals
+# include <unistd.h> //getpid and sleep
 
 #endif

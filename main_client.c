@@ -6,11 +6,11 @@
 /*   By: rpohlen <rpohlen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 03:40:40 by rpohlen           #+#    #+#             */
-/*   Updated: 2022/01/25 01:01:37 by rpohlen          ###   ########.fr       */
+/*   Updated: 2022/01/26 03:12:25 by rpohlen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minitalk.h"
+#include "client.h"
 
 int	g_response_received;
 

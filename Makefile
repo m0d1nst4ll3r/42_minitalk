@@ -6,11 +6,14 @@
 #    By: rpohlen <rpohlen@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/20 14:37:51 by rpohlen           #+#    #+#              #
-#    Updated: 2022/01/24 23:23:05 by rpohlen          ###   ########.fr        #
+#    Updated: 2022/01/26 04:24:48 by rpohlen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-MAIN_SRV	= main_server.c
+MAIN_SRV	= main_server.c \
+			  $(addprefix src/server/, \
+			  list.c \
+			  print.c)
 
 MAIN_CLI	= main_client.c
 

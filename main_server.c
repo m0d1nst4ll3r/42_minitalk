@@ -6,7 +6,7 @@
 /*   By: rpohlen <rpohlen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 03:39:09 by rpohlen           #+#    #+#             */
-/*   Updated: 2022/01/26 04:34:15 by rpohlen          ###   ########.fr       */
+/*   Updated: 2022/01/27 18:05:36 by rpohlen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,15 @@ static int	get_pid(void)
 
 	pid = 0;
 	i = 0;
-	while (g_bit != -1 && i < 15)
+	while (g_bit != -1 && i < 32)
 	{
 		pid = pid | g_bit << i;
 		i++;
 		g_bit = -1;
-		if (i < 15)
+		if (i < 32)
 			usleep(PID_TIMEOUT_S);
 	}
-	if (i < 15)
+	if (i < 32)
 	{
 		ft_printf("Received incomplete PID...\n");
 		return (-1);

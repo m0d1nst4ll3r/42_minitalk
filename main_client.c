@@ -6,7 +6,7 @@
 /*   By: rpohlen <rpohlen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 03:40:40 by rpohlen           #+#    #+#             */
-/*   Updated: 2022/01/26 03:12:25 by rpohlen          ###   ########.fr       */
+/*   Updated: 2022/01/27 17:48:26 by rpohlen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,13 +90,13 @@ static int	send_pid(int pid_s, int pid_c)
 	while (!g_response_received && ++j < MAX_RETRIES)
 	{
 		i = -1;
-		while (++i < 15)
+		while (++i < 32)
 		{
 			if (1 & pid_c >> i)
 				kill(pid_s, BIT_1);
 			else
 				kill(pid_s, BIT_0);
-			if (i < 14)
+			if (i < 31)
 				usleep(PID_SLEEP);
 		}
 		usleep(PID_TIMEOUT_C);
@@ -123,7 +123,7 @@ int	main(int ac, char **av)
 	if (!ft_isint(av[1]))
 		return (ft_printf("Invalid PID :(\n") || 1);
 	pid_s = ft_atoi(av[1]);
-	if (!pid_s || pid_s > 1 << 15)
+	if (!pid_s)
 		return (ft_printf("Invalid PID :(\n") || 1);
 	sa.sa_handler = &handle_sigusr;
 	sa.sa_flags = SA_RESTART;
